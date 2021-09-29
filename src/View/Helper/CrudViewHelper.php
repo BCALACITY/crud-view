@@ -438,6 +438,7 @@ class CrudViewHelper extends Helper
         $args = func_get_args();
 
         return implode(
+            ' ',
             array_unique(array_merge(
                 [
                     'scaffold-action',
@@ -447,8 +448,7 @@ class CrudViewHelper extends Helper
                 ],
                 $args,
                 $viewClasses
-            )),
-            ' '
+            ))
         );
     }
 }
